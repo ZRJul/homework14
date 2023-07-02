@@ -105,13 +105,15 @@ for(let i = 0; i < amount; i++) {
     let elem = prompt("Введіть значення елементу" + (i + 1),'');
     arrSym.push([elem]);
 }
-console.log(arrSym)
-
+console.log(arrSym);
 function delSym (str, arrSym){
-    let sym = arrSym.join()
-    console.log(sym);
-    let newStr = str.replace(sym,'')
-    console.log(newStr);
+
+    arrSym.forEach(function (array) {
+        str = str.replace(RegExp(arrSym, "g"), "");
+    });
+    return str;
+
 }
-delSym(str, arrSym);
+// let newStr = delSym(str, arrSym);
+console.log(delSym(str, arrSym));
 
