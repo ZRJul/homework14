@@ -109,7 +109,7 @@ console.log(arrSym);
 function delSym (str, arrSym){
 
     arrSym.forEach(function (array) {
-        str = str.replace(RegExp(arrSym, "g"), "");
+        str = str.replace(RegExp(array, "g"), "");
     });
     return str;
 
